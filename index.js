@@ -102,3 +102,8 @@ const incrementAge = (obj) => {
 };
 console.log(incrementAge(testObj)); //age: 112
 console.log(testObj); //age: 112
+
+//Take an object, make a copy, and increment the age field of the copy. Return the copy.
+const incrementAgeCopy = (obj) => ({ ...obj, age: obj.age + 1 });
+console.log(incrementAgeCopy(testObj)); //age: 113
+console.log(testObj); //age: 112
