@@ -91,3 +91,14 @@ console.log(remap(testArr));
 const avgAge = (arr) =>
   Math.round(arr.reduce((total, e) => total + e.age, 0) / arr.length);
 console.log(avgAge(testArr)); //52
+
+////Part 3: Thinking Critically
+let testObj = { id: "7", name: "Bilbo", occupation: "None", age: "111" };
+
+//Take an object and increment its age field.
+const incrementAge = (obj) => {
+  obj.age++;
+  return obj;
+};
+console.log(incrementAge(testObj)); //age: 112
+console.log(testObj); //age: 112
