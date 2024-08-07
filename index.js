@@ -47,3 +47,14 @@ const stringsLongerThan = (arr, number) => {
 };
 
 console.log(stringsLongerThan(["say", "hello", "in", "the", "morning"], 3));
+
+//Take a number, n, and print every number between 1 and n without using loops. Use recursion.
+const printEveryNumber = (n) => {
+  // do recursion for negative numbers, if any
+  if (n <= 0) printEveryNumber(n + 1);
+  // do recursion for positive numbers, if any
+  if (n > 1) printEveryNumber(n - 1);
+  console.log(n);
+};
+printEveryNumber(-5); // 1 0 -1 -2 -3 -4 -5
+printEveryNumber(5); // 1 2 3 4 5
