@@ -97,6 +97,7 @@ let testObj = { id: "7", name: "Bilbo", occupation: "None", age: "111" };
 
 //Take an object and increment its age field.
 const incrementAge = (obj) => {
+  obj.updated_at = new Date(); // Date object with the current time
   obj.age = ++obj.age | 0; // if the object does not yet contain an age field, create one and set it to 0
   return obj;
 };
@@ -104,6 +105,10 @@ console.log(incrementAge(testObj)); //age: 112
 console.log(testObj); //age: 112
 
 //Take an object, make a copy, and increment the age field of the copy. Return the copy.
-const incrementAgeCopy = (obj) => ({ ...obj, age: (obj.age + 1) | 0 }); // if the object does not yet contain an age field, create one and set it to 0
+const incrementAgeCopy = (obj) => ({
+  ...obj,
+  age: (obj.age + 1) | 0, // if the object does not yet contain an age field, create one and set it to 0
+  updated_at: new Date(), // Date object with the current time
+});
 console.log(incrementAgeCopy(testObj)); //age: 113
 console.log(testObj); //age: 112
