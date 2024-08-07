@@ -19,3 +19,17 @@ const avg = (arr) => {
 };
 
 console.log(avg([1, 2, 3, 4, 5]));
+
+//Take an array of strings and return the longest string.
+const longestString = (arr) => {
+  if (!Array.isArray(arr) || !arr.length) return "";
+  let output = "";
+  arr.forEach((item) => {
+    if (typeof item === "string" && item.length > output.length) {
+      output = item;
+    }
+  });
+  return output;
+};
+
+console.log(longestString(["One", "Two", "Three", "Four", "Five"]));
