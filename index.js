@@ -118,3 +118,9 @@ console.log(testObj); //age: 112
 testObjCopy.updated_at.setTime(Date.now() - 10);
 console.log(testObjCopy.updated_at.getTime()); //1723000437460
 console.log(testObj.updated_at.getTime()); //1723000437470
+
+////Part 4: Thinking Practically
+// N/A
+
+////Part 5: Thinking Back
+// TBD
