@@ -110,5 +110,11 @@ const incrementAgeCopy = (obj) => ({
   age: (obj.age + 1) | 0, // if the object does not yet contain an age field, create one and set it to 0
   updated_at: new Date(), // Date object with the current time
 });
-console.log(incrementAgeCopy(testObj)); //age: 113
+let testObjCopy = incrementAgeCopy(testObj);
+console.log(testObjCopy); //age: 113
 console.log(testObj); //age: 112
+
+// Thought experiment: since the Date object is an object, what would happen if we modified it in the copy of the object created in the second function using setTime()
+testObjCopy.updated_at.setTime(Date.now() - 10);
+console.log(testObjCopy.updated_at.getTime()); //1723000437460
+console.log(testObj.updated_at.getTime()); //1723000437470
