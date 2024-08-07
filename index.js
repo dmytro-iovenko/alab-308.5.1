@@ -75,3 +75,13 @@ console.log(sortByAge(testArr));
 //Filter the array to remove entries with an age greater than 50.
 const filterOlderThan = (arr, n) => arr.filter((e) => !(e.age > n));
 console.log(filterOlderThan(testArr, 50));
+
+//Map the array to change the “occupation” key to “job” and increment every age by 1.
+const remap = (arr) =>
+  arr.map((e) => ({
+    id: e.id,
+    name: e.name,
+    job: e.occupation,
+    age: ++e.age,
+  }));
+console.log(remap(testArr));
