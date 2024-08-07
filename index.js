@@ -85,3 +85,9 @@ const remap = (arr) =>
     age: ++e.age,
   }));
 console.log(remap(testArr));
+
+//Use the reduce method to calculate the sum of the ages.
+//Then use the result to calculate the average age.
+const avgAge = (arr) =>
+  Math.round(arr.reduce((total, e) => total + e.age, 0) / arr.length);
+console.log(avgAge(testArr)); //52
