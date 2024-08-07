@@ -33,3 +33,17 @@ const longestString = (arr) => {
 };
 
 console.log(longestString(["One", "Two", "Three", "Four", "Five"]));
+
+//Take an array of strings, and a number and return an array of the strings that are longer than the given number.
+const stringsLongerThan = (arr, number) => {
+  if (!Array.isArray(arr) || !arr.length) return [];
+  const output = [];
+  arr.forEach((item) => {
+    if (typeof item === "string" && item.length > number) {
+      output.push(item);
+    }
+  });
+  return output;
+};
+
+console.log(stringsLongerThan(["say", "hello", "in", "the", "morning"], 3));
